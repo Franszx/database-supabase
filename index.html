@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Urbanist:wght@100;400;700;900&display=swap" rel="stylesheet" />
+    <title>Pet Cemetary</title>
+    <script type="module" src="./utils/index.js"></script>
+  </head>
+  <body>
+    <h1>Pet cemetary</h1>
+    <main>
+      <h2>Add Pet:</h2>
+      <form id="petForm" action="url" method="get">
+        <label for="id-species" class="label">Species</label>
+        <select name="species" id="id-species" required>
+          <option value="" disabled selected>- select specie -</option>
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+          <option value="Cow">Cow</option>
+          <option value="Snake">Snake</option>
+          <option value="Mouse">Mouse</option>
+          <option value="Monkey">Monkey</option>
+          <option value="Pig">Pig</option>
+          <option value="Other">Other</option>
+        </select>
+        <label for="id-race" class="label">Race</label>
+        <input type="text" name="race" id="id-race" required />
+
+        <label for="id-name" class="label">Name</label>
+        <input id="id-name" type="text" name="name" />
+
+        <label for="id-dob" class="label">Date of birth</label>
+        <input id="id-dob-day" type="number" name="day" max="31" min="1" />
+        <input id="id-dob-month" type="number" name="month" max="12" min="1" />
+        <input id="id-dob-year" type="number" name="year" minlength="4" maxlength="4" required />
+        <input id="label" type="date" name="fulldate" />
+
+        <fieldset class="group">
+          <legend>What is your pets best traits?</legend>
+          <textarea name="traits" id="traits" cols="50" rows="2" required></textarea>
+        </fieldset>
+
+        <fieldset class="group">
+          <legend class="title">Activity level:</legend>
+          <div class="label">
+            <input type="radio" name="activityLevel" id="id-activityLevel" value="1" />
+            1
+          </div>
+          <div class="label">
+            <input type="radio" name="activityLevel" id="id-activityLevel" value="2" />
+            2
+          </div>
+          <div class="label">
+            <input type="radio" name="activityLevel" id="id-activityLevel" value="3" />
+            3
+          </div>
+          <div class="label">
+            <input type="radio" name="activityLevel" id="id-activityLevel" value="4" />
+            4
+          </div>
+          <div class="label">
+            <input type="radio" name="activityLevel" id="id-activityLevel" value="5" />
+            5
+          </div>
+        </fieldset>
+
+        <label for="id-photo" class="label">Add photo</div>
+        <input id="id-name" type="file" name="photo" required />
+
+        <fieldset class="group">
+          <legend>john john</legend>
+          <div class="label">
+            <input type="radio" name="status" id="id-status-alive" value="alive" />
+            Alive
+          </div>
+          <div class="label">
+            <input type="radio" name="status" id="id-status-dead" value="dead" />
+            Dead
+          </div>
+        </fieldset>
+        <form>
+          <span>
+            <input type="checkbox" id="id-dead" name="dead" required />
+            <label for="id-dead">My pet is dead</label>
+          </span>
+          <span>
+            <input type="checkbox" id="id-alive" name="alive" />
+            <label for="id-alive">My pet is alive</label>
+          </span>
+        </form>
+
+        <div class="btn" role="button" aria-pressed="false" tabindex="0">Add my Pet</div>
+        <button type="submit">Submit</button>
+      </form>
+      <section>
+    
+        <div class="section-wrapper">
+          <h2>Here are the pets:</h2>
+      <section class="showPets"></section>
+    </div>
+    </section>
+
+      <template>
+        <article>
+          <img class="image" src="#" alt="picture of pet">
+          <h2>XXXXXX</h2>
+          <div>
+            <p>Alive: <span class="status"></span></p>
+          </div>
+            <p>Type: <span class="species">XXXXX</span></p>
+            <p>Race: <span class="race">XXXXXXXX</span></p>
+            <p>Born: <span class="dob"></span></p>
+            <p>Activity level: <span class="activity">5</span>
+          </p>
+          <div class="actions">
+            <button data-id="15" data-action="delete">Delete</button>
+            <button data-id="15" data-action="update">Opdater</button>
+          </div>
+          <!-- <p class="petName">xxx</p>
+          <h2>Alive</2>
+          <p class="deadOrAlive">xxx</p>
+          <h3>Traits</h3>
+          <p class="traits">xxx</p>
+          <h4>species</h4>
+          <p class="specie">xxx</p>
+          <div class="actions"> -->
+        </article>
+      </template>
+    </main>
+    <!-- <footer><button>Kill pet!</button></footer> -->
+  </body>
+</html>
